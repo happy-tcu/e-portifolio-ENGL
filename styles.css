@@ -361,36 +361,42 @@ ul.bullets li::before {
   pointer-events: none;
 }
 
+.subnav-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0.4rem 0 0.5rem;
+}
+
 .tab-strip {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin-bottom: 1.8rem;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 0;
+  padding: 0.3rem;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
 }
 
 .tab-btn {
   display: inline-block;
-  padding: 0.6rem 1.1rem;
+  padding: 0.35rem 0.95rem;
   background: transparent;
-  border: 1px solid var(--rule);
-  border-bottom: none;
-  border-radius: 6px 6px 0 0;
+  border: 0;
+  border-radius: 999px;
   cursor: pointer;
   user-select: none;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--muted);
   letter-spacing: 0.01em;
-  margin-bottom: -1px;
-  transition: color 0.18s, background 0.18s, border-color 0.18s;
+  transition: color 0.18s, background 0.18s;
 }
 
-.tab-btn:hover {
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.6);
-}
+.tab-btn:hover { color: var(--ink); }
 
 .tab-panel {
   display: none;
@@ -407,23 +413,9 @@ ul.bullets li::before {
 #rr2:checked ~ .tab-strip label[for="rr2"],
 #rr3:checked ~ .tab-strip label[for="rr3"],
 #rr4:checked ~ .tab-strip label[for="rr4"] {
-  background: var(--cream);
-  border-color: var(--rule);
-  color: var(--ink);
-  border-bottom: 1px solid var(--cream);
-  position: relative;
-}
-
-#rr1:checked ~ .tab-strip label[for="rr1"]::after,
-#rr2:checked ~ .tab-strip label[for="rr2"]::after,
-#rr3:checked ~ .tab-strip label[for="rr3"]::after,
-#rr4:checked ~ .tab-strip label[for="rr4"]::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; top: 0;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 6px 6px 0 0;
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 #rr1:checked ~ .tab-panel[data-tab="rr1"],
