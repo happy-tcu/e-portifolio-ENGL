@@ -350,6 +350,48 @@ ul.bullets li::before {
   text-align: center;
 }
 
+/* ----- ESSAY / MLA ----- */
+.mla-header {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0.5rem 0 2rem;
+  padding-left: 0.1rem;
+  border-left: 2px solid var(--rule);
+  padding-left: 1rem;
+}
+
+.essay p {
+  text-align: justify;
+  text-indent: 1.6rem;
+  margin-bottom: 0.1rem;
+  hyphens: auto;
+}
+
+.essay p.lede {
+  text-indent: 0;
+  margin-bottom: 1rem;
+}
+
+.essay p + p { text-indent: 1.6rem; }
+
+.works-cited-heading {
+  margin-top: 3rem;
+}
+
+.works-cited {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.works-cited li {
+  padding-left: 1.6rem;
+  text-indent: -1.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 /* ----- PDF EMBED ----- */
 .pdf-wrap {
   width: 100%;
